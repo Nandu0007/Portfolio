@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.e84fe2e0.css",
+    "main.js": "/Portfolio/static/js/main.65894678.js",
+    "static/js/453.ace21015.chunk.js": "/Portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/profile.png": "/Portfolio/static/media/profile.c5048d52c1400c54f289.png",
+    "static/media/AI-Powered Code Review Assistant.png": "/Portfolio/static/media/AI-Powered Code Review Assistant.46e695d4c1468770514f.png",
+    "static/media/home-image.png": "/Portfolio/static/media/home-image.23b2dbc74eda50da6786.png",
+    "static/media/Face Mask Detection Using C.png": "/Portfolio/static/media/Face Mask Detection Using C.ae2f581f8803dc1cf485.png",
+    "static/media/codeEditor.png": "/Portfolio/static/media/codeEditor.1b585492490c8c1cace9.png",
+    "static/media/background.jpg": "/Portfolio/static/media/background.a98efa3452f0561a79aa.jpg",
+    "static/media/about.png": "/Portfolio/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/Personal Finance Tracker.jpg": "/Portfolio/static/media/Personal Finance Tracker.f3589c2b907158d40ebe.jpg",
+    "static/media/chatify.png": "/Portfolio/static/media/chatify.7206044e0b5cdad44726.png",
+    "static/media/Nandish_Resume.pdf": "/Portfolio/static/media/Nandish_Resume.f56b63fc16ffc9bbc012.pdf",
+    "static/media/Real-time System Monitoring.jpg": "/Portfolio/static/media/Real-time System Monitoring.b087cd5a753a97b7eebe.jpg",
+    "static/media/SQL.svg": "/Portfolio/static/media/SQL.7fd9bdcee9744b3b731709f2753c68af.svg",
+    "static/media/Mongo.svg": "/Portfolio/static/media/Mongo.2c5a056ee9abf56973ee685904548bb8.svg",
+    "static/media/vscode.svg": "/Portfolio/static/media/vscode.f5afdf1c4c0b365325db1e067c48782d.svg",
+    "static/media/Python.svg": "/Portfolio/static/media/Python.9daed22c470296a63e19d0d509a1828b.svg",
+    "static/media/React.svg": "/Portfolio/static/media/React.fa17b44468fe3c157fc20898567de2b4.svg",
+    "static/media/pre.svg": "/Portfolio/static/media/pre.d4812f51c8c80976eaab.svg",
+    "static/media/Java.svg": "/Portfolio/static/media/Java.980d8e77e92511acfefbf2dfdf4336e1.svg",
+    "static/media/Node.svg": "/Portfolio/static/media/Node.4ccf66deab4cce38fa6a744e962daa9f.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/C++.svg": "/Portfolio/static/media/C++.90772619f39a0a3b04f60ee5c827c002.svg",
+    "static/media/Javascript.svg": "/Portfolio/static/media/Javascript.dcff0bf09e6c5ffc3eaea9cc7ec4c8f5.svg",
+    "static/media/Git.svg": "/Portfolio/static/media/Git.9fbdd94cab5e68fd45b434fd29b1bb5e.svg",
+    "main.e84fe2e0.css.map": "/Portfolio/static/css/main.e84fe2e0.css.map",
+    "main.65894678.js.map": "/Portfolio/static/js/main.65894678.js.map",
+    "453.ace21015.chunk.js.map": "/Portfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84fe2e0.css",
+    "static/js/main.65894678.js"
+  ]
+}

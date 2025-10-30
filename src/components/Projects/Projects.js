@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import aiCodeReview from "../../Assets/Projects/AI-Powered Code Review Assistant.png";
+import financeTracker from "../../Assets/Projects/Personal Finance Tracker.jpg";
+import systemMonitoring from "../../Assets/Projects/Real-time System Monitoring.jpg";
+import faceMask from "../../Assets/Projects/Face Mask Detection Using C.png";
+import snakeGame from "../../Assets/Projects/Snake Game Using C.jpeg";
+import collabEditor from "../../Assets/Projects/codeEditor.png";
+import audioRoom from "../../Assets/Projects/chatify.png";
 
 function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,7 +16,7 @@ function Projects() {
 
   const projectsData = [
     {
-      imgPath: editor,
+      imgPath: aiCodeReview,
       title: "AI-Powered Code Review Assistant",
       description: "Fine-tuned language models trained to accurately code review data. Supports GitHub, GitLab, and Bitbucket. Features automated code reviews with intelligent suggestions and visualizes trends to improve code quality over time.",
       ghLink: "https://github.com/Nandu0007/-AI-Powered-Code-Review-Assistant",
@@ -23,7 +24,7 @@ function Projects() {
       tags: ["AI", "Machine Learning", "Python"]
     },
     {
-      imgPath: bitsOfCode,
+      imgPath: collabEditor,
       title: "Collaborative Code Editor",
       description: "Real-time collaborative code editor for multi-user coding sessions. Built with JavaScript. Features live syntax highlighting, conflict resolution, and Web Socket communication for secure authentication with a scalable low-latency backend.",
       ghLink: "https://github.com/Nandu0007/collab-code-editor",
@@ -31,7 +32,7 @@ function Projects() {
       tags: ["JavaScript", "WebSocket", "Real-time"]
     },
     {
-      imgPath: chatify,
+      imgPath: audioRoom,
       title: "Audio Room",
       description: "A Flutter-based application for managing live audio rooms for interactive discussions. Built with Dart, designed for real-time audio engagement and moderation. Features seamless audio quality and community participation management.",
       ghLink: "https://github.com/Nandu0007/audioroom",
@@ -39,7 +40,7 @@ function Projects() {
       tags: ["Flutter", "Dart", "Mobile"]
     },
     {
-      imgPath: leaf,
+      imgPath: financeTracker,
       title: "Personal Finance Tracker",
       description: "Full-featured personal finance tracker built with JavaScript. Monitor income, expenses, and savings with automated expense categorization and monthly financial reports. Includes intuitive dashboards to visualize cash flow, budgeting trends, and secure data storage.",
       ghLink: "https://github.com/Nandu0007/Personal-Finance-Tracker",
@@ -47,7 +48,7 @@ function Projects() {
       tags: ["JavaScript", "Dashboard", "Finance"]
     },
     {
-      imgPath: emotion,
+      imgPath: systemMonitoring,
       title: "Real-time System Monitoring",
       description: "Python-based real-time system monitoring tool. Monitor CPU, memory, disk usage, and network activity in real-time. Features visual dashboards and alerts for system performance tracking and resource management.",
       ghLink: "https://github.com/Nandu0007/Real-time-System-Monitoring",
@@ -55,7 +56,7 @@ function Projects() {
       tags: ["Python", "Monitoring", "Real-time"]
     },
     {
-      imgPath: suicide,
+      imgPath: faceMask,
       title: "Face Mask Detection Using C",
       description: "Face mask detection system implemented in C programming language. Uses image processing techniques to detect whether a person is wearing a face mask. Demonstrates computer vision fundamentals and real-time detection capabilities.",
       ghLink: "https://github.com/Nandu0007/Face-Mask-Detection-Using-C",
@@ -63,7 +64,7 @@ function Projects() {
       tags: ["C", "Computer Vision", "OpenCV"]
     },
     {
-      imgPath: chatify,
+      imgPath: snakeGame,
       title: "Snake Game Using C",
       description: "Classic snake game implementation in C++. Features smooth gameplay, score tracking, and collision detection. Demonstrates object-oriented programming concepts and game development fundamentals with terminal-based graphics.",
       ghLink: "https://github.com/Nandu0007/Snake-Game-Using-C",

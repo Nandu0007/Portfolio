@@ -1,14 +1,14 @@
 html {
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(15, 23, 42, 0.95),
-    rgba(30, 41, 59, 0.95)
+    rgba(0, 0, 0, 0.95),
+    rgba(20, 20, 20, 0.95)
   );
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(15, 23, 42, 0.9),
-    rgba(30, 41, 59, 0.9)
+    rgba(0, 0, 0, 0.85),
+    rgba(20, 20, 20, 0.85)
   );
 
   --imp-text-color: #3b82f6;
@@ -32,7 +32,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0f172a;
+  background-color: #000000;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -62,7 +62,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #0a0a0a;
 }
 
 /* Handle */
@@ -81,9 +81,9 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: rgba(15, 23, 42, 0.9) !important;
+  background-color: rgba(0, 0, 0, 0.95) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5) !important;
   backdrop-filter: blur(15px) !important;
 }
 
@@ -149,7 +149,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #0f172a !important;
+    background-color: #000000 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
@@ -264,9 +264,11 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
-  background-position: top center;
+  background-image: none;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
@@ -455,7 +457,11 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .project-card {
@@ -553,7 +559,11 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  /* background-image: var(--section-background-color) !important; */
+  background-image: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white !important;
 }
 
@@ -626,7 +636,11 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white !important;
 }
 
@@ -769,6 +783,11 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
+  background-image: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white !important;
 }
 
@@ -848,14 +867,14 @@ button:focus {
 }
 
 .contact-form {
-  background: rgba(30, 41, 59, 0.5);
+  background: rgba(15, 15, 15, 0.7);
   padding: 30px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
 }
 
 .contact-input {
-  background: rgba(15, 23, 42, 0.7) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
   border: 1px solid rgba(59, 130, 246, 0.3) !important;
   color: white !important;
   padding: 12px 20px !important;
@@ -864,7 +883,7 @@ button:focus {
 }
 
 .contact-input:focus {
-  background: rgba(15, 23, 42, 0.9) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
   border-color: #3b82f6 !important;
   box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25) !important;
   color: white !important;
@@ -914,7 +933,7 @@ button:focus {
 }
 
 .project-search-input {
-  background: rgba(15, 23, 42, 0.7) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
   border: 2px solid rgba(59, 130, 246, 0.3) !important;
   color: white !important;
   padding: 15px 25px !important;
@@ -925,7 +944,7 @@ button:focus {
 }
 
 .project-search-input:focus {
-  background: rgba(15, 23, 42, 0.9) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
   border-color: #3b82f6 !important;
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
   color: white !important;
@@ -945,7 +964,7 @@ button:focus {
 }
 
 .filter-btn {
-  background: rgba(30, 41, 59, 0.5) !important;
+  background: rgba(20, 20, 20, 0.7) !important;
   border: 2px solid rgba(59, 130, 246, 0.3) !important;
   color: white !important;
   padding: 10px 25px !important;
@@ -985,6 +1004,11 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 50px !important;
+  background-image: none !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   color: white !important;
 }
 
@@ -998,7 +1022,7 @@ button:focus {
 }
 
 .certification-card {
-  background: rgba(30, 41, 59, 0.6) !important;
+  background: rgba(15, 15, 15, 0.8) !important;
   border: 2px solid rgba(59, 130, 246, 0.3) !important;
   border-radius: 15px !important;
   padding: 20px;
@@ -1054,7 +1078,7 @@ button:focus {
 }
 
 .courses-completed-section {
-  background: rgba(30, 41, 59, 0.5);
+  background: rgba(15, 15, 15, 0.7);
   padding: 40px;
   border-radius: 15px;
   backdrop-filter: blur(10px);
@@ -1238,4 +1262,41 @@ button:focus {
 .project-search-input {
   pointer-events: auto !important;
   cursor: text !important;
+}
+
+/* Bold fonts for better readability */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+}
+
+.heading, .heading-name, .project-heading {
+  font-weight: 800 !important;
+}
+
+.main-name {
+  font-weight: 900 !important;
+}
+
+p, .home-about-body {
+  font-weight: 500 !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600 !important;
+}
+
+.project-card .card-title {
+  font-weight: 700 !important;
+}
+
+.tech-icons-text {
+  font-weight: 600 !important;
+}
+
+.cert-title {
+  font-weight: 700 !important;
+}
+
+.contact-title {
+  font-weight: 700 !important;
 }

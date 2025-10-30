@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Form } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
@@ -10,6 +10,78 @@ import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const projectsData = [
+    {
+      imgPath: editor,
+      title: "AI-Powered Code Review Assistant",
+      description: "Fine-tuned language models trained to accurately code review data. Supports GitHub, GitLab, and Bitbucket. Features automated code reviews with intelligent suggestions and visualizes trends to improve code quality over time.",
+      ghLink: "https://github.com/Nandu0007/-AI-Powered-Code-Review-Assistant",
+      category: "AI/ML",
+      tags: ["AI", "Machine Learning", "Python"]
+    },
+    {
+      imgPath: bitsOfCode,
+      title: "Collaborative Code Editor",
+      description: "Real-time collaborative code editor for multi-user coding sessions. Built with JavaScript. Features live syntax highlighting, conflict resolution, and Web Socket communication for secure authentication with a scalable low-latency backend.",
+      ghLink: "https://github.com/Nandu0007/collab-code-editor",
+      category: "Web App",
+      tags: ["JavaScript", "WebSocket", "Real-time"]
+    },
+    {
+      imgPath: chatify,
+      title: "Audio Room",
+      description: "A Flutter-based application for managing live audio rooms for interactive discussions. Built with Dart, designed for real-time audio engagement and moderation. Features seamless audio quality and community participation management.",
+      ghLink: "https://github.com/Nandu0007/audioroom",
+      category: "Mobile App",
+      tags: ["Flutter", "Dart", "Mobile"]
+    },
+    {
+      imgPath: leaf,
+      title: "Personal Finance Tracker",
+      description: "Full-featured personal finance tracker built with JavaScript. Monitor income, expenses, and savings with automated expense categorization and monthly financial reports. Includes intuitive dashboards to visualize cash flow, budgeting trends, and secure data storage.",
+      ghLink: "https://github.com/Nandu0007/Personal-Finance-Tracker",
+      category: "Web App",
+      tags: ["JavaScript", "Dashboard", "Finance"]
+    },
+    {
+      imgPath: emotion,
+      title: "Real-time System Monitoring",
+      description: "Python-based real-time system monitoring tool. Monitor CPU, memory, disk usage, and network activity in real-time. Features visual dashboards and alerts for system performance tracking and resource management.",
+      ghLink: "https://github.com/Nandu0007/Real-time-System-Monitoring",
+      category: "Tools",
+      tags: ["Python", "Monitoring", "Real-time"]
+    },
+    {
+      imgPath: suicide,
+      title: "Face Mask Detection Using C",
+      description: "Face mask detection system implemented in C programming language. Uses image processing techniques to detect whether a person is wearing a face mask. Demonstrates computer vision fundamentals and real-time detection capabilities.",
+      ghLink: "https://github.com/Nandu0007/Face-Mask-Detection-Using-C",
+      category: "AI/ML",
+      tags: ["C", "Computer Vision", "OpenCV"]
+    },
+    {
+      imgPath: chatify,
+      title: "Snake Game Using C",
+      description: "Classic snake game implementation in C++. Features smooth gameplay, score tracking, and collision detection. Demonstrates object-oriented programming concepts and game development fundamentals with terminal-based graphics.",
+      ghLink: "https://github.com/Nandu0007/Snake-Game-Using-C",
+      category: "Game",
+      tags: ["C++", "Game Dev"]
+    }
+  ];
+
+  const categories = ["All", "AI/ML", "Web App", "Mobile App", "Tools", "Game"];
+
+  const filteredProjects = projectsData.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = activeFilter === "All" || project.category === activeFilter;
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -20,73 +92,57 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+
+        {/* Search and Filter */}
+        <Row className="project-filter-section">
+          <Col md={12} className="search-box-container">
+            <Form.Control
+              type="text"
+              placeholder="🔍 Search projects..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="project-search-input"
+            />
+          </Col>
+          <Col md={12} className="filter-buttons-container">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
+                onClick={() => {
+                  console.log('Filter clicked:', category);
+                  setActiveFilter(category);
+                }}
+              >
+                {category}
+              </button>
+            ))}
+          </Col>
+        </Row>
+
+        {/* Project Count */}
+        <p style={{ color: "#60a5fa", textAlign: "center", marginTop: "20px" }}>
+          Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+        </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <Col md={4} className="project-card" key={index}>
+                <ProjectCard
+                  imgPath={project.imgPath}
+                  isBlog={false}
+                  title={project.title}
+                  description={project.description}
+                  ghLink={project.ghLink}
+                />
+              </Col>
+            ))
+          ) : (
+            <Col md={12} style={{ textAlign: "center", padding: "50px" }}>
+              <h3 style={{ color: "white" }}>No projects found matching your criteria 😔</h3>
+              <p style={{ color: "#94a3b8" }}>Try adjusting your search or filter</p>
+            </Col>
+          )}
         </Row>
       </Container>
     </Container>

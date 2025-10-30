@@ -13,17 +13,16 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              I'm a results-driven technologist specializing in Full-Stack Development
+              and AI/ML. I love building secure, low-latency systems and creating
+              innovative software solutions.
               <br />
               <br />
-              I’m proficient in
+              I'm proficient in
               <i>
                 <b className="purple">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  JavaScript, Java, Python, SQL, and Node.js{" "}
                 </b>
               </i>
               — and I enjoy working across both backend and frontend stacks.
@@ -33,17 +32,17 @@ function Home2() {
               <i>
                 <b className="purple">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  Web Applications, AI/ML Solutions,{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              and solving complex problems with efficient data structures and algorithms.
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              I love building projects with the
+              <b className="purple"> MERN Stack </b> using{" "}
               <i>
                 <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="purple">Node.js</b>.
               </i>
             </p>
           </Col>
